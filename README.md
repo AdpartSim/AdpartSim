@@ -1,8 +1,8 @@
 # AdpartSim
 
-AdpartSim is a **scalable** simulation tool platform, through which some interfaces it defines can easily achieve simulation of the computing process and communication process. Through the framework of AdpartSim, it is possible to implement customized computing simulations, network topologies (*there are also some commonly used network topologies that have been defined*), collective communication algorithms, and parallel optimization strategies. In the future, it can support various network types as well as the RDMA network commonly used in data centers (*we are currently working on related tasks*). It should be noted that AdpartSim supports **hierarchical networks**. When optimizing the collective communication library in the training process of LM, we can carry out communication tasks based on the conditions of multiple levels of networks. Hierarchical networks are very common network architectures in some new data centers, which is very helpful for accelerating collective communication in the training process of LM.
-
 ![banner](./images/banner.png)
+
+AdpartSim is a **scalable** simulation tool platform, through which some interfaces it defines can easily achieve simulation of the computing process and communication process. Through the framework of AdpartSim, it is possible to implement customized computing simulations, network topologies (*there are also some commonly used network topologies that have been defined*), collective communication algorithms, and parallel optimization strategies. In the future, it can support various network types as well as the RDMA network commonly used in data centers (*we are currently working on related tasks*). It should be noted that AdpartSim supports **hierarchical networks**. When optimizing the collective communication library in the training process of LM, we can carry out communication tasks based on the conditions of multiple levels of networks. Hierarchical networks are very common network architectures in some new data centers, which is very helpful for accelerating collective communication in the training process of LM.
 
 ## QUICKSTART
 
@@ -41,7 +41,7 @@ Of course, you can also write your own script to handle the raw CSC result files
 
 - **Time Line**
 
-![image-traffic](./images/image-traffic.png)
+![image-timeline](./images/image-timeline.png)
 
 - **Traffic**
 
