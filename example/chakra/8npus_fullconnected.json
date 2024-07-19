@@ -1,0 +1,41 @@
+{
+    "Strategy": {
+        "Type": "Chakra",
+        "Epoch": 1,
+        "Workload": "${CURRENT_PATH}/workload/8npus/Resnet50_DataParallel"
+    },
+    "Node": {
+        "Count": 8,
+        "Accelerator": {
+            "Type": "Direct",
+            "Latency_ns": 100,
+            "ClockFreq_GHz": 1.0,
+            "Performance_TFLOPS": 1000.0
+        },
+        "Communicator": {
+            "BufferSize_MB": 200,
+            "Algorithm": "Direct",
+            "ReceiveTimeout_s": 10
+        },
+        "Memory": {
+            "Bandwidth_Gbps": 5200,
+            "Latency_ns": 100,
+            "Capacity_GB": 65
+        }
+    },
+    "Switch": {
+        "Count": 0
+    },
+    "Network": [
+        {
+            "Type": "Phy",
+            "Topology": "FullConnected",
+            "TopologyAttrs": [],
+            "NodeCount": 8,
+            "SwitchCount": 0,
+            "RepeatCount": 1,
+            "Bandwidth_Gbps": 160,
+            "Latency_ns": 20000
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "StartSizeByte": 8,
+    "EndSizeByte": 2147483648,
+    "StepFactor": 2,
+    "Algorithms": [
+        "P2P_SEND",
+        "P2P_RECV",
+        "BARRIER",
+        "REDUCE",
+        "GATHER",
+        "SCATTER",
+        "BROADCAST",
+        "ALL_TO_ALL",
+        "ALL_GATHER",
+        "ALL_REDUCE",
+        "REDUCE_SCATTER"
+    ]
+}

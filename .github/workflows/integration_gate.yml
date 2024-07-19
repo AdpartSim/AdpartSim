@@ -1,0 +1,32 @@
+name: IntegrationGate
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: install apt dependencies
+        run: |
+          sudo apt update && sudo apt upgrade -y
+          sudo apt install -y gcc g++ cmake mpich ninja-build
+          sudo apt install -y python3-pip libprotobuf-dev protobuf-compiler
+          sudo apt install -y libssl-dev libboost-all-dev libboost-dev libboost-program-options-dev
+      - name: install pip requirements
+        run: |
+          pip install --upgrade pip
+          pip install -r ${{github.workspace}}/requirements.txt
+      - name: build AdpartSim
+        run: ${{github.workspace}}/build.sh -c
+      - name: integration gate test
+        run: python3 ${{github.workspace}}/script/integration_gate.py
+      - name: upload build result of AdpartSim
+        uses: actions/upload-artifact@v4
+        with:
+          name: AdpartSim
+          path: ${{github.workspace}}/adpart_sim

@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "gdb_adpartsim",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/AdpartSim",
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "envFile": "${workspaceFolder}/.env",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "build_adpartsim",
+            "args": [
+                "--input=example/chakra/8npus_fullconnected.json"
+            ],
+            "setupCommands": [
+                {
+                    "description": "Enable pretty printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set the disassembly style to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Python",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}

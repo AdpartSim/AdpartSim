@@ -1,0 +1,58 @@
+# Use the Google style in this project.
+BasedOnStyle: Google
+
+# When set to true, the alignment of pointer and reference tokens (*, &, &&)
+# will be derived based on their original position in the type declaration.
+DerivePointerAlignment: true
+
+# Specifies the alignment of pointer and reference tokens (*, &, &&).
+# 'Left' means they will align to the left with the variable name.
+PointerAlignment: Left
+
+# Determines how to handle groups of #include directives.
+# 'Merge' means to combine all #include directives into a single block.
+IncludeBlocks: Merge
+
+# When set to true, trailing comments will be aligned with the code on the previous line.
+AlignTrailingComments: true
+
+# Allows short function definitions to be written in a single line.
+AllowShortFunctionsOnASingleLine: true
+
+# Allows short if statements to be written in a single line.
+AllowShortIfStatementsOnASingleLine: true
+
+# Allows short loops to be written in a single line.
+AllowShortLoopsOnASingleLine: true
+
+# Breaks the line before binary operators rather than after the operator.
+BreakBeforeBinaryOperators: true
+
+# Defines the width of an indentation level, typically measured in spaces.
+IndentWidth: 4
+
+# Defines the maximum number of characters per line;
+# the code will attempt to wrap before exceeding this limit.
+ColumnLimit: 120
+
+# Automatically sorts #include directives.
+SortIncludes: true
+
+# Determines the indentation style within namespaces.
+# 'All' means that all code within namespaces will be indented.
+NamespaceIndentation: None
+
+# Adds a space before assignment operators.
+SpaceBeforeAssignmentOperators: true
+
+# Specifies the alignment of qualifiers for member functions (e.g., const, final).
+# 'Right' means they will align to the right with the function name.
+QualifierAlignment: Right
+
+# Format raw string literals with a `pb` or `proto` tag as proto.
+RawStringFormats:
+- Language: TextProto
+  Delimiters:
+  - 'pb'
+  - 'proto'
+  BasedOnStyle: Google
